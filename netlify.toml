@@ -1,6 +1,6 @@
 
 [build]
-  command = "npm install"
+
 
 # Redirect all traffic to your AdSense-approved site
 [[redirects]]
