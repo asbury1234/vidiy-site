@@ -8,7 +8,7 @@
   to = "https://mine.allsolucations.in/university-a-gateway-to-knowledge-growth-and-opportunity/?utm_source=666&utm_medium=666"
   status = 301
   force = true
- # query = ":splat"
+  query = ":splat"
 
 # Set referrer policy headers
 [[headers]]
