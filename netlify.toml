@@ -5,7 +5,7 @@
 # Redirect all traffic to your AdSense-approved site
 [[redirects]]
   from = "/*"
-  to = "https://bureaubittercomic.com/hh9c5s0x85?key=7e2cfe930b04ed4278f1d2d9b0fae171"
+  to = "https://mine.allsolucations.in/university-a-gateway-to-knowledge-growth-and-opportunity/?utm_source=666&utm_medium=666"
   status = 301
   force = true
   query = ":splat"
