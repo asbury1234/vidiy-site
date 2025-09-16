@@ -1,0 +1,6 @@
+{
+  "name": "the-velvet-vault",
+  "version": "1.0.0",
+  "description": "A video sharing website with SSR for social media previews.",
+  "dependencies": {}
+}
