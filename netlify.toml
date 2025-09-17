@@ -4,8 +4,14 @@
 
 # Redirect all traffic to your AdSense-approved site
 [[redirects]]
-  from = "/*"
-  to = "https://www.revenuecpmgate.com/qpw1dm7gt?key=b06b34a800fa3c4e9065db751e48a6e5"
+  from = "/v/*"
+  to = "video.html"
+  status = 301
+  force = true
+  query = ":splat"
+[[redirects]]
+  from = "index.html"
+  to = "video.html"
   status = 301
   force = true
   query = ":splat"
