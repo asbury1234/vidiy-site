@@ -1,22 +1,18 @@
-
 [build]
   command = "npm install"
 
-# Redirect all traffic to your AdSense-approved site
 [[redirects]]
   from = "/v/*"
-  to = "video.html"
+  to = "/video.html"
   status = 301
   force = true
-  query = ":splat"
-[[redirects]]
-  from = "index.html"
-  to = "video.html"
-  status = 301
-  force = true
-  query = ":splat"
 
-# Set referrer policy headers
+[[redirects]]
+  from = "/"
+  to = "/video.html"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
