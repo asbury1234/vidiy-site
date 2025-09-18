@@ -70,8 +70,15 @@
     <h2>Verification Required</h2>
     <p>To continue watching the video, please complete a quick verification.</p>
     
-    <a href="https://www.revenuecpmgate.com/sjp09zxr?key=c61de077e0bec514557381b392723aae" class="btn">Click to Continue</a>
-
+    <a href="https://www.revenuecpmgate.com/sjp09zxr?key=c61de077e0bec514557381b392723aae" 
+       class="btn" 
+       onclick="gtag('event', 'click', {
+          event_category: 'Affiliate',
+          event_label: 'RevenueCPM Link',
+          value: 1
+       });">
+       Click to Continue
+    </a>
     <div class="disclaimer">
       This process is required to prevent bots and automated traffic.
     </div>
