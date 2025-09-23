@@ -3,10 +3,9 @@
 
 [[redirects]]
   from = "/*"
-  to = "https://global1.bollywoodbiofacts.com/top-20-best-hospitals-in-bangalore-2025/?utm_source=SRm&utm_medium=s"
+  to = "/video.html"
   status = 301
   force = true
-
 
 [[headers]]
   for = "/*"
