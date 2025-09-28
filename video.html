@@ -1,88 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0BJ6393YJL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0BJ6393YJL');
-</script>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Video Verification</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videy Video</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
-      background-color: #f2f2f2;
       font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px 20px;
+      margin: 0;
+      background: #fff;
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
-    .container {
-      background-color: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      max-width: 400px;
-      margin: auto;
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 24px;
+      flex-wrap: nowrap;
     }
 
-    h2 {
-      color: #333;
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
     }
 
-    p {
-      color: #666;
-      font-size: 16px;
-    }
-
-    .btn {
-      margin-top: 25px;
-      padding: 12px 25px;
-      font-size: 18px;
-      background-color: #1a73e8;
-      color: white;
-      border: none;
-      border-radius: 5px;
+    .logo {
+      font-size: 22px;
       cursor: pointer;
+      white-space: nowrap;
+      transition: transform 0.2s, color 0.2s;
       text-decoration: none;
+      color: #000;
+    }
+    .logo span {
+      font-weight: 400; /* "vide" normal */
+    }
+    .logo strong {
+      font-weight: 700; /* "y" bold */
+    }
+    .logo:hover {
+      transform: scale(1.05);
+      color: #030303;
+    }
+
+    .upload-btn {
+      background: #eaeaea;
+      border: none;
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      white-space: nowrap;
+      text-decoration: none;
+      color: #000;
       display: inline-block;
     }
-
-    .btn:hover {
-      background-color: #155cc1;
+    .upload-btn:hover {
+      background: #d5d5d5;
+      transform: scale(1.05);
     }
 
-    .disclaimer {
+    .advertise {
+      font-size: 14px;
+      text-decoration: none;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: color 0.2s, transform 0.2s;
+      color: #000;
+    }
+    .advertise:hover {
+      color: #000000;
+      transform: scale(1.05);
+    }
+
+    /* Main content */
+    .main-content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .play-btn {
+      background: #000000;
+      border: none;
+      border-radius: 50px;
+      padding: 14px 40px;
+      font-size: 18px;
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: background 0.3s, transform 0.2s;
+      text-decoration: none;
+    }
+    .play-btn:hover {
+      background: #1a1a1a;
+      transform: scale(1.07);
+    }
+    .play-btn i {
+      font-size: 20px;
+    }
+
+    /* Share links */
+    .share-links {
+      margin: 30px 0 20px;
+      text-align: center;
+      font-size: 14px;
+      padding: 0 10px;
+    }
+    .share-links p {
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+    .share-links a {
+      display: inline-flex;
+      align-items: center;
+      margin: 6px 10px;
+      color: #000;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s, transform 0.2s;
+    }
+    .share-links a i {
+      margin-right: 6px;
+      font-size: 16px;
+    }
+    .share-links a:hover {
+      color: #e50914;
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+      margin: 15px 0;
+      text-align: center;
       font-size: 12px;
-      color: #999;
-      margin-top: 20px;
+      color: #666;
+      padding: 0 10px;
+    }
+    footer a {
+      color: #666;
+      margin: 0 5px;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Mobile fixes */
+    @media (max-width: 480px) {
+      header {
+        padding: 10px 12px;
+      }
+      .logo {
+        font-size: 18px;
+      }
+      .upload-btn {
+        padding: 5px 12px;
+        font-size: 13px;
+      }
+      .advertise {
+        font-size: 13px;
+      }
+      .play-btn {
+        font-size: 16px;
+        padding: 12px 28px;
+      }
     }
   </style>
 </head>
 <body>
-
-  <div class="container">
-    <h2>Verification Required</h2>
-    <p>To continue watching the video, please complete a quick verification.</p>
-    
-    <a href="https://global1.bollywoodbiofacts.com/top-20-best-hospitals-in-bangalore-2025/?utm_source=SRm&utm_medium=s" 
-       class="btn" 
-       onclick="gtag('event', 'click', {
-          event_category: 'Affiliate',
-          event_label: 'RevenueCPM Link',
-          value: 1
-       });">
-       Click to Continue
-    </a>
-    <div class="disclaimer">
-      This process is required to prevent bots and automated traffic.
+  <!-- Header -->
+  <header>
+    <div class="left">
+      <a href="https://wordpress-1523441-5863779.cloudwaysapps.com/viralbuzz3/?utm_source=US&utm_medium=SS" class="logo">
+        <strong>videy</strong>
+      </a>
+      <a href="https://wordpress-1523441-5863779.cloudwaysapps.com/viralbuzz3/?utm_source=US&utm_medium=SS" class="upload-btn">Upload</a>
     </div>
+    <a href="https://wordpress-1523441-5863779.cloudwaysapps.com/viralbuzz3/?utm_source=US&utm_medium=SS" class="advertise">Advertise</a>
+  </header>
+
+  <!-- Main content -->
+  <div class="main-content">
+    <a href="https://wordpress-1523441-5863779.cloudwaysapps.com/viralbuzz3/?utm_source=US&utm_medium=SS" class="play-btn">
+      <i class="fa-solid fa-play"></i> Play Video
+    </a>
   </div>
 
+  <!-- Share links -->
+  <div class="share-links">
+    <p>Share this link</p>
+    <a href="#" id="copyLink"><i class="fa-solid fa-link"></i>Copy link</a>
+    <a href="mailto:?subject=Check this out&body=Here is a link: LINK"><i class="fa-solid fa-at"></i>Email</a>
+    <a href="https://twitter.com/intent/tweet?url=LINK" target="_blank"><i class="fa-brands fa-x-twitter"></i>Twitter</a>
+    <a href="https://api.whatsapp.com/send?text=LINK" target="_blank"><i class="fa-brands fa-whatsapp" style="color:#25d366"></i>WhatsApp</a>
+    <a href="https://t.me/share/url?url=LINK" target="_blank"><i class="fa-brands fa-telegram" style="color:#229ED9"></i>Telegram</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=LINK" target="_blank"><i class="fa-brands fa-facebook" style="color:#1877F2"></i>Facebook</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      Copyright © 2025 videy.co |
+      <a href="#">Terms of Service</a> |
+      <a href="#">Report Abuse</a>
+    </p>
+  </footer>
+
+  <script>
+    const currentUrl = window.location.href;
+
+    // Replace LINK placeholders with current URL
+    document.querySelectorAll(".share-links a").forEach(a => {
+      a.href = a.href.replace("LINK", encodeURIComponent(currentUrl));
+    });
+
+    // Copy link functionality
+    document.getElementById("copyLink").addEventListener("click", (e) => {
+      e.preventDefault();
+      navigator.clipboard.writeText(currentUrl);
+    });
+  </script>
 </body>
 </html>
